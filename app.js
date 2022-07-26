@@ -62,12 +62,10 @@ filterdData.addEventListener("click", function (e) {
   //* filterd data by category
   let selectedCategory = e.target.textContent;
   let filteredCards = allCards.filter(function (card) {
-    console.log(card, selectedCategory);
     return card.category === selectedCategory;
   })
   list.innerHTML = "";
   filteredCards.forEach(function (card) {
-    console.log(card)
     let newCard = new Card(card.fname, card.lname, card.category);
     newCard.render();
   })
